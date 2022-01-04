@@ -1,1 +1,85 @@
-<p>employee-register works!</p>
+<div class="card">
+  <div class="card-header text-center bg-info text-white">
+    <h3>EMPLOYEE REGISTER</h3>
+  </div>
+  <div class="card-body">
+    <form action="#" (ngSubmit)="createEmployee()">
+      <div class="form-group">
+        <label><b>Enter Employee Name</b></label>
+        <input
+          type="text"
+          name="empName"
+          id="empName"
+          [(ngModel)]="employee.empName"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><b>Enter Employee Salary</b></label>
+        <input
+          type="number"
+          name="empSal"
+          id="empSal"
+          [(ngModel)]="employee.empSal"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><b>Select Employee Gender</b></label>
+        <br />
+        <input
+          type="radio"
+          name="empGen"
+          id="empGen1"
+          [(ngModel)]="employee.empGen"
+          value="Male"
+        />
+        Male
+        <input
+          type="radio"
+          name="empGen"
+          id="empGen2"
+          [(ngModel)]="employee.empGen"
+          value="Female"
+        />
+        Female
+      </div>
+
+      <div class="form-group">
+        <label><b>Select Employee Department</b></label>
+        <select
+          name="empDept"
+          id="empDept"
+          [(ngModel)]="employee.empDept"
+          class="form-control"
+        >
+          <option value="">SELECT</option>
+          <option value="Dev">Dev</option>
+          <option value="QA">QA</option>
+          <option value="BA">BA</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label><b>Enter Employee Address</b></label>
+        <textarea
+          name="empAddr"
+          id="empAddr"
+          [(ngModel)]="employee.empAddr"
+          class="form-control"
+        >
+        </textarea>
+      </div>
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary btn btn-lg">
+          REGISTER
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer bg-success text-center text-white btn-lg">
+    {{ message }}
+  </div>
+</div>

@@ -1,19 +1,20 @@
 <div class="container">
-  <div class="card">
-      <div class="card-header bg-secondary text-center text-white">
-          <h1>WELCOME TO EMPLOYEE SERVICE APP</h1>
+  <div class="card active">
+      <div class="card-header bg-primary text-center text-white active">
+          <h1><u><strong>WELCOME TO EMPLOYEE SERVICE APP</strong></u></h1>
       </div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand text-white" href="#">EmployeeService</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark active">
+  <div class="container">
+  <a class="" href="#"><button class="btn-lg float-right btn btn-info active"><i class="fa fa-home"></i><b> Employee</b></button></a>
+  </div>
   <button
-    class="navbar-toggler"
+    class="navbar-toggler active"
     type="button"
     data-toggle="collapse"
     data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+    aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -21,19 +22,19 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <div class="container">
-        <a class="btn btn-primary" href="#" role="button" routerLink='add'>Add</a>
+        <a class="btn-lg float-right btn btn-primary" href="#" role="button" routerLink='add'>Add</a>
       </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <div class="container">
-        <a class="btn btn-warning" href="#" role="button" routerLink='list'>View</a>
+        <a class="btn-lg float-right btn btn-warning" href="#" role="button" routerLink='list'>View</a>
       </div>
       </li>
       <!-- Example split danger button -->
       <div class="container">
       <div class="btn-group">
-        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          Operation
+        <button type="button" class="btn-lg float-right btn btn-success dropdown-toggle active" data-toggle="dropdown" aria-expanded="false">
+          Employee
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#" routerLink='add'>Add</a>
@@ -44,5 +45,4 @@
     </ul>
   </div>
 </nav>
-
 <router-outlet></router-outlet>
