@@ -1,11 +1,11 @@
 <div class="container">
   <div class="card active">
       <div class="card-header bg-primary text-center text-white active">
-          <h1><u><strong>WELCOME TO EMPLOYEE SERVICE APP</strong></u></h1>
+          <h1><u><strong>WELCOME TO EMPLOYEE SERVICE</strong></u></h1>
       </div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark active">
   <div class="container">
-  <a class="" href="#"><button class="btn-lg float-right btn btn-info active"><i class="fa fa-home"></i><b> Employee</b></button></a>
+  <a class="" href="#"><button class="btn-lg float-right btn btn-info active"><i class="fa fa-home"></i> Employee App</button></a>
   </div>
   <button
     class="navbar-toggler active"
@@ -30,6 +30,16 @@
         <a class="btn-lg float-right btn btn-warning" href="#" role="button" routerLink='list'>View</a>
       </div>
       </li>
+      <li class="nav-item active">
+        <div class="container">
+        <a class="btn-lg float-right btn btn-info" href="#" role="button" routerLink='add'>Update</a>
+      </div>
+      </li>
+      <li class="nav-item active">
+        <div class="container">
+        <a class="btn-lg float-right btn btn-danger" href="#" role="button" routerLink='list'>Delete</a>
+      </div>
+      </li>
       <!-- Example split danger button -->
       <div class="container">
       <div class="btn-group">
@@ -39,10 +49,13 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#" routerLink='add'>Add</a>
           <a class="dropdown-item" href="#" routerLink='list'>View</a>
+          <a class="dropdown-item" href="#" routerLink='add'>Update</a>
+          <a class="dropdown-item" href="#" routerLink='list'>Delete</a>
           </div>
         </div>
       </div>
     </ul>
   </div>
 </nav>
+<img src="https://i.ibb.co/VmvfQgn/Personal-Profile-Facebook-Cover-2.png" alt="Personal-Profile-Facebook-Cover-2" border="0">
 <router-outlet></router-outlet>
