@@ -1,1 +1,48 @@
-<p>employee-all works!</p>
+<div class="card">
+  <div class="card-header bg-secondary text-center text-white btn-lg">
+    <h3>LIST OF ALL EMPLOYEE DATA</h3>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <tr class="bg-warning text-dark text-center btn-lg">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let emp of employees">
+        <td style="text-align: center">
+          <b>{{ emp.empId }}</b>
+        </td>
+        <td style="text-align: center">
+          <b>{{ emp.empName }}</b>
+        </td>
+        <td style="text-align: center">
+          <b>{{ emp.empSal }}</b>
+        </td>
+        <td style="text-align: center">
+          <b>{{ emp.empGen }}</b>
+        </td>
+        <td style="text-align: center">
+          <b>{{ emp.empDept }}</b>
+        </td>
+        <td style="text-align: center">
+          <b>{{ emp.empAddr }}</b>
+        </td>
+        <td>
+          <button type="button active"
+            class="btn-lg btn-danger active"
+            (click)="deleteEmployee(emp.empId)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="card-footer bg-info text-center text-danger btn-lg">
+  <h4><i>{{ message }}</i></h4>
+</div>

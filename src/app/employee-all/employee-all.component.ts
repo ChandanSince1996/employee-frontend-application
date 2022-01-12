@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../employee';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-all',
@@ -7,9 +9,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeAllComponent implements OnInit {
 
-  constructor() { }
+  //Define array variable
+  employees: Employee[] = [];
+  message: string = '';
+
+  //Dependency Injection
+  constructor(private service: EmployeeService) { }
 
   ngOnInit(): void {
+    this.getAllEmployee();
   }
 
+  //Call service method to fetch data
+  getAllEmployee() {
+    this.service.fetchAllEmployee().subscribe(
+      data => {
+        this.employees = data;
+      }, error => {
+        console.log(error);
+      }
+    );
+  }
+
+  //Call service method to delete employee data
+  deleteEmployee(id: number) {
+    //alert('Delete clicked '+id);
+    this.service.removeOneEmployee(id).subscribe(
+      data => {
+        this.message = data;
+        this.getAllEmployee();
+      }, error => {
+        console.log(error);
+      }
+    );
+  }
 }

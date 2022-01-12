@@ -12,6 +12,7 @@
           id="empName"
           [(ngModel)]="employee.empName"
           class="form-control"
+          placeholder="Enter valid employee name"
         />
       </div>
 
@@ -69,6 +70,7 @@
           id="empAddr"
           [(ngModel)]="employee.empAddr"
           class="form-control"
+          placeholder="Enter valid employee addrress"
         >
         </textarea>
       </div>
@@ -79,7 +81,9 @@
       </div>
     </form>
   </div>
-  <div class="card-footer bg-success text-center text-white btn-lg">
-    {{ message }}
-  </div>
+</div>
+<div class="card-footer bg-success text-center text-white btn-lg">
+  <h4>
+    <i>{{ message }}</i>
+  </h4>
 </div>
